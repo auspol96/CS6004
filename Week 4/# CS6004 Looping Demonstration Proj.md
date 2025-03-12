@@ -73,21 +73,3 @@ namespace CS6004_Looping_Demo
 }
 
 ```
-
-## 🚀 Steps to Run the Program
-Save all files inside your Visual Studio project.
-Press Ctrl + F5 to run the application.
-Select an option from the menu:
-1 → Runs the For Loop.
-2 → Runs the Foreach Loop.
-3 → Calculates Factorial using Recursion.
-4 → Exits the program.
-
-## 📖 Project Overview
-Save all files inside your Visual Studio project.
-Press Ctrl + F5 to run the application.
-Select an option from the menu:
-1 → Runs the For Loop.
-- **For Loop** → Iterates a fixed number of times.
-- **Foreach Loop** → Iterates over collections like arrays or lists.
-- **Recursion (Factorial Calculation)** → A function that calls itself.

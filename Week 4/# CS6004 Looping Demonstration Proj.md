@@ -23,6 +23,13 @@ Create the following files inside your project:
 - `ForeachLoop.cs` → Demonstrates the **foreach loop**.
 - `Recursion.cs` → Demonstrates **recursion (factorial calculation)**.
 
+
+---
+
+### **✅ What’s Next?**
+- **Modify the for loop to count from 10 to 1.
+- **Modify the foreach loop to print only even numbers..
+
 ---
 
 ## **📂 Code Files**

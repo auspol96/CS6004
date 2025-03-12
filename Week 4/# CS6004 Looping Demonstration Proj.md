@@ -84,7 +84,10 @@ Select an option from the menu:
 4 → Exits the program.
 
 ## 📖 Project Overview
-This project demonstrates different **looping structures** in C#, including:
+Save all files inside your Visual Studio project.
+Press Ctrl + F5 to run the application.
+Select an option from the menu:
+1 → Runs the For Loop.
 - **For Loop** → Iterates a fixed number of times.
 - **Foreach Loop** → Iterates over collections like arrays or lists.
 - **Recursion (Factorial Calculation)** → A function that calls itself.

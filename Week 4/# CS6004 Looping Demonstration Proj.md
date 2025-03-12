@@ -73,7 +73,7 @@ namespace CS6004_Looping_Demo
 }
 
 ```
-
+---
 🚀 Steps to Run the Program
 Save all files inside your Visual Studio project.
 Press Ctrl + F5 to run the application.

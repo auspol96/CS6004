@@ -82,3 +82,9 @@ Select an option from the menu:
 2 → Runs the Foreach Loop.
 3 → Calculates Factorial using Recursion.
 4 → Exits the program.
+
+## 📖 Project Overview
+This project demonstrates different **looping structures** in C#, including:
+- **For Loop** → Iterates a fixed number of times.
+- **Foreach Loop** → Iterates over collections like arrays or lists.
+- **Recursion (Factorial Calculation)** → A function that calls itself.

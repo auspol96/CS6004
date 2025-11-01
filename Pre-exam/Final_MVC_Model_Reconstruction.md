@@ -226,3 +226,35 @@ namespace LibraryApp.Controllers
     </tbody>
 </table>
 ```
+### 📁 ApplicationDbContext.cs
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using YourNamespace.Models;
+
+namespace YourNamespace.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Optional: Fluent API if needed
+            // modelBuilder.Entity<Book>()
+            //     .HasOne(b => b.Category)
+            //     .WithMany(c => c.Books)
+            //     .HasForeignKey(b => b.CategoryId);
+        }
+    }
+}
+```
+

@@ -1,0 +1,124 @@
+# Exercise 4: Favorite Books List (ASP.NET Core MVC)
+
+## Objective
+In this exercise, students will learn how to:
+- Create a model with multiple properties
+- Pass a list of objects from controller to view
+- Render the list in an HTML table
+
+---
+
+## Expected Outcome
+The webpage should display a list of favorite books in a table format, showing **Title**, **Author**, and **Publication Year**.
+
+---
+
+## Step-by-Step Guide
+
+### Step 1: Create a New ASP.NET Core MVC Project (if not already started)
+```bash
+dotnet new mvc -n FavoriteBooksApp
+cd FavoriteBooksApp
+```
+
+### Step 2: Create a Model
+Create a new file in the `Models` folder:
+
+**File:** `Models/Book.cs`
+```csharp
+namespace FavoriteBooksApp.Models
+{
+    public class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public int Year { get; set; }
+    }
+}
+```
+
+---
+
+### Step 3: Create Controller
+Create a controller named `BooksController.cs` in the `Controllers` folder.
+
+**File:** `Controllers/BooksController.cs`
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using FavoriteBooksApp.Models;
+using System.Collections.Generic;
+
+namespace FavoriteBooksApp.Controllers
+{
+    public class BooksController : Controller
+    {
+        public IActionResult Index()
+        {
+            var bookList = new List<Book>
+            {
+                new Book { Title = "To Kill a Mockingbird", Author = "Harper Lee", Year = 1960 },
+                new Book { Title = "1984", Author = "George Orwell", Year = 1949 },
+                new Book { Title = "The Great Gatsby", Author = "F. Scott Fitzgerald", Year = 1925 }
+            };
+
+            return View(bookList);
+        }
+    }
+}
+```
+
+---
+
+### Step 4: Create View
+Create a new Razor View `Index.cshtml` under `Views/Books/`
+
+**File:** `Views/Books/Index.cshtml`
+```razor
+@model List<FavoriteBooksApp.Models.Book>
+
+<h2>My Favorite Books</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Year</td>
+            </tr>
+        }
+    </tbody>
+</table>
+```
+
+---
+
+### Step 5: Register Route
+Update `Views/Shared/_Layout.cshtml` or home page link to point to `/Books/Index` or navigate manually to:
+```
+https://localhost:5001/Books
+```
+
+---
+
+## ✅ Deliverables
+When the project runs, students should see a table displaying 3 books with their titles, authors, and years.
+
+---
+
+## 📌 Learning Recap
+- Model with multiple properties
+- List of objects passed to view
+- Razor syntax to loop and render table
+
+---
+
+Ready for the next one? You can continue to **Exercise 5: To-Do List** for Boolean condition rendering.
